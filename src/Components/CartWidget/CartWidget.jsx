@@ -1,0 +1,16 @@
+import './CartWidget.css';
+import carritoImg from '../../media/images/carrito.png';
+
+
+const CartWidget = (props) => {
+  return (
+    <div className="CartWidget">
+        <img src={carritoImg}  />
+        <div className="numero_cart">
+            <p>{props.numero}</p>
+        </div>
+    </div>
+  )
+}
+
+export default CartWidget

@@ -1,5 +1,6 @@
 import './NavBar.css';
-import logo from '../logo.svg';
+import logo from '../../logo.svg';
+import CartWidget from '../CartWidget/CartWidget';
 
 function NavBar() {
     return (
@@ -17,7 +18,11 @@ function NavBar() {
 
             <div className="login">
                 <button type="button">Login</button>
+                <CartWidget numero={2}/>
             </div>
+
+            
+
         </div>
     );
   }

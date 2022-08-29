@@ -2,7 +2,7 @@ import './NavBar.css';
 import logo from '../../logo.svg';
 import CartWidget from '../CartWidget/CartWidget';
 
-function NavBar() {
+function NavBar(props) {
     return (
         <div className="navBar">
             <div className="logo_class">
@@ -18,7 +18,7 @@ function NavBar() {
 
             <div className="login">
                 <button type="button">Login</button>
-                <CartWidget numero={2}/>
+                <CartWidget number={props.numberCart}/>
             </div>
 
             

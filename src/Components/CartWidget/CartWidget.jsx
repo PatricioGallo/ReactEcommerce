@@ -7,7 +7,7 @@ const CartWidget = (props) => {
     <div className="CartWidget">
         <img src={carritoImg}  />
         <div className="numero_cart">
-            <p>{props.numero}</p>
+            <p>{props.number}</p>
         </div>
     </div>
   )

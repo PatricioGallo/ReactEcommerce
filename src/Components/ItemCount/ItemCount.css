@@ -1,0 +1,77 @@
+.ItemCount{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-count__text{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+}
+.item-count__text p{
+    font-size: 15px;
+    margin-left: 10px;
+    color: grey;
+}
+
+.item-count__box{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item-count__box__content{
+    width: 90%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+
+.item-count__box__content button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: blue;
+    font-size: 25px;
+}
+.item-count__box__content p{
+    font-size: 20px;
+}
+
+.item-count__button{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-count__button button{
+    width: 90%;
+    height: 40px;
+    background-color: white;
+    border: 1px solid darkturquoise;
+    color: darkturquoise;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.item-count__button button:hover{
+    color: rgb(3, 169, 172);
+    border: 1px solid rgb(3, 169, 172);
+}

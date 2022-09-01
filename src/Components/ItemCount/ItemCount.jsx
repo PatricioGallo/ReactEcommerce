@@ -5,8 +5,7 @@ const ItemCount = (props) => {
     const Add = ()=> {
         if(props.count < props.stock){
             props.Addcount();
-        }
-        
+        }     
     }
 
     const Remove = ()=> {
@@ -19,9 +18,10 @@ const ItemCount = (props) => {
         props.onAddCart();
     }
 
+    
   return (
-    <div className="item-count">
 
+    <div className="item-count">
         <div className="item-count__text">
             <p>Remera de algodon</p>
         </div>
@@ -35,7 +35,6 @@ const ItemCount = (props) => {
         <div className="item-count__button">
             <button onClick={onAdd}>AGREGAR AL CARRITO</button>
         </div>
-        
     </div>
   )
 }

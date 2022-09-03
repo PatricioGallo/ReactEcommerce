@@ -2,14 +2,14 @@
 const ItemList = [{
     id:1,
     title:'primer elemento',
-    description:'primer elemento',
+    description:'Descripcion del primer elemento',
     price: 2000,
     pictureUrl:'https://d39f23jfph0ylk.cloudfront.net/primero.com.jpg'
     },{
 
         id:2,
         title:'segundo elemento',
-        description:'segundo elemento',
+        description:'Descripcion del segundo elemento',
         price: 3000,
         pictureUrl:'http://www.segundo.com/segundo/images/segundo.jpg'
     },{

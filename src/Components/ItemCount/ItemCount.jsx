@@ -23,7 +23,7 @@ const ItemCount = (props) => {
 
     <div className="item-count">
         <div className="item-count__text">
-            <p>Remera de algodon</p>
+            <p>{props.title}</p>
         </div>
         <div className="item-count__box">
             <div className="item-count__box__content">

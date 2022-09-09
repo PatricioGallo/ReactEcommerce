@@ -1,5 +1,4 @@
-
-const ItemList = [{
+const productos = [{
     id:1,
     title:'primer elemento',
     description:'Descripcion del primer elemento',
@@ -30,6 +29,13 @@ const ItemList = [{
     description:'quinto elemento',
     price: 10000,
     pictureUrl:'http://www.quinto.com/quinto/images/quinto.jpg'
-}]
+}];
 
-export default ItemList;
+ export const getItems = () => {  
+            return new Promise ((resolve) => {
+                setTimeout(()=>{
+                    resolve (productos);
+                },2000)
+            })
+      }
+

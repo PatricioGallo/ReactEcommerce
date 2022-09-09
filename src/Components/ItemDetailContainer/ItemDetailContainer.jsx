@@ -1,24 +1,15 @@
 import './ItemDetailContainer.css'
 import ItemDetail from '../ItemDetail/ItemDetail'
-import ItemList from '../ItemList/ItemList';
 import { useState , useEffect} from "react";
+import { getItems } from '../Data/AsyncMock';
 
 const ItemDetailContainer = (props) => {
 
     const [Item, setItem] = useState({});
 
-    const getItems = ()=> {
-        const data = new Promise((resolve, reject) => {
-            resolve(ItemList);
-        }).then((datos) =>{
-            setTimeout(() =>{
-                setItem(datos[props.index]);
-            },2000);
-        })
-    }
-
     useEffect(() => {
-        getItems();
+        getItems().then( (datos) => {
+        setItem(datos[props.index]);})
     },[]);
 
   return (

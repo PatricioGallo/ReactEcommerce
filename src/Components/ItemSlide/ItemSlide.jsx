@@ -1,7 +1,6 @@
-import './Item.css'
-import {Link} from 'react-router-dom'; 
-
-const Item = (props) => {
+import './ItemSlide.css'
+import {Link} from 'react-router-dom';
+const ItemSlide = (props) => {
   return (
 
     <div className="item-container">
@@ -13,20 +12,14 @@ const Item = (props) => {
         <div className="item-image">
             <img src={props.url} alt='' />
         </div>
-
-        <div className="item-description">
-            <p>{props.description}</p>
-        </div>
-
         <div className="item-button">
             <Link to={`/detail/${props.id}`} className="link_boton">
             <button type="button">Ver detalle</button>
             </Link>
         </div>
-
     </div>
 
   )
 }
 
-export default Item
+export default ItemSlide

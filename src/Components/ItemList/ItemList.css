@@ -1,0 +1,36 @@
+.itemList{
+    width: 96%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.itemFinder{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.itemListContent{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.categories{
+    width: 100%;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.Link{
+    margin-top: 20px;
+    text-decoration: none;
+    color: black
+}

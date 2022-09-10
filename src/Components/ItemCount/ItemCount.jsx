@@ -1,23 +1,6 @@
 import './ItemCount.css'
 
 const ItemCount = (props) => {
-
-    const Add = ()=> {
-        if(props.count < props.stock){
-            props.Addcount();
-        }     
-    }
-
-    const Remove = ()=> {
-        if(props.count > 1){  
-            props.removeCount();
-        }
-    }
-
-    const onAdd = ()=> {
-        props.onAddCart();
-    }
-
     
   return (
 
@@ -27,13 +10,13 @@ const ItemCount = (props) => {
         </div>
         <div className="item-count__box">
             <div className="item-count__box__content">
-                <button onClick={Add}>+</button>
+                <button onClick={props.add}>+</button>
                 <p>{props.count}</p>
-                <button onClick={Remove}>-</button>
+                <button onClick={props.remove}>-</button>
             </div>
         </div>
         <div className="item-count__button">
-            <button onClick={onAdd}>AGREGAR AL CARRITO</button>
+            <button onClick={props.onAdd}>AGREGAR AL CARRITO</button>
         </div>
     </div>
   )

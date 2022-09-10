@@ -1,0 +1,52 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner{
+    width: 100%;
+}
+.banner img{
+    width: 100%;
+}
+.novedades{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.novedadesTitle{
+    width: 80%;
+}
+.novedadesTitle h1{
+    font-size: 25px;
+    color:#555555;
+}
+.linea{
+    width: 100%;
+    border: 1px solid #555555;
+}
+.novedadesSlide {
+    width: 80%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.slideContent{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}

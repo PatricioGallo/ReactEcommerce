@@ -1,13 +1,8 @@
 .ItemListContainer{
-    width: 90%;
-    min-height: 500px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 30px;
+    align-items: center;
 }
 

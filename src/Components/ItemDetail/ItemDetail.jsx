@@ -1,11 +1,19 @@
 import './ItemDetail.css';
 import ItemCount from '../ItemCount/ItemCount';
-import { useState , useEffect} from "react";
-const ItemDetail = (props) => {
-  const [count, setcount]= useState(0);
+import { useState } from "react";
+import { useContext } from 'react';
+import { CartContext } from '../../Context/CartContext';
+
+
+const ItemDetail = ({Item,alertOn}) => {
+  const {addItem} = useContext(CartContext);
+
   const onAdd = (dato)=>{
-    setcount(dato);
+    addItem(Item,dato);
+    alertOn();
   }
+
+
   return (
     <>
         <div className="image">
@@ -13,11 +21,10 @@ const ItemDetail = (props) => {
         </div>
 
         <div className="description">
-            <div className="title"><h1>{props.title}</h1></div>
-            <div className='price'><h2>${props.price}</h2></div>
-            <div className='description_content'><p>{props.description}</p></div>
-            <ItemCount title={props.title}  onAdd={onAdd}/>
-            <p>{count}</p>
+            <div className="title"><h1>{Item.title}</h1></div>
+            <div className='price'><h2>${Item.price}</h2></div>
+            <div className='description_content'><p>{Item.description}</p></div>
+            <ItemCount title={Item.title}  onAdd={onAdd}/>
         </div>
     </>
   )

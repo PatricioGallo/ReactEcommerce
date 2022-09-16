@@ -1,0 +1,39 @@
+.cart-products-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-products{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.details{
+    width: 40%;
+}
+.products{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.products p{
+    margin-right: 10px;
+}
+.products button{
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}

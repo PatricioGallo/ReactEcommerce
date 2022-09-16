@@ -7,21 +7,26 @@ import {useParams} from 'react-router-dom';
 function ItemListContainer() {
 
   const[Items, setItems] = useState([]);
+  const[categories, setCategories] = useState(false);
   const {category} = useParams();
+
 
   useEffect(() => {
     getItems().then((productos) => {
       if(category ){
         setItems(productos.filter(item => item.categoria === category));
+        setCategories(category);
       }else{
-          setItems(productos);}
+          setItems(productos);
+          setCategories(false);
+        }
   });
   },[category]);
 
 
     return (
         <div className="ItemListContainer">
-        <ItemList items={Items}/>
+        <ItemList items={Items} category={categories}/>
         </div>
     );
 }

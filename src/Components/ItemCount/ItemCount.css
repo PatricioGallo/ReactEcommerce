@@ -15,7 +15,8 @@
     height: 100px;
     display: flex;
     flex-direction: column;
-    justify-content:end;
+    justify-content:center;
+    align-items: center;
 }
 .item-count__text p{
     font-size: 15px;

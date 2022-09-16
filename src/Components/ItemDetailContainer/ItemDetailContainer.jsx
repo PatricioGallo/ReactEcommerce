@@ -7,6 +7,7 @@ const ItemDetailContainer = (props) => {
 
     const [Item, setItem] = useState({});
     const { idProduct} = useParams();
+    const [alert, setAlert] = useState(false);
 
     useEffect(() => {
         getItems().then( (datos) => {
@@ -14,9 +15,33 @@ const ItemDetailContainer = (props) => {
       })
     },[idProduct]);
 
+    const alertOn = () => {
+        setAlert(true)
+        setTimeout( () => {
+          setAlert(false);
+        },2000);
+    }
+
+
   return (
     <div className="ItemDetailContainer">
-        <ItemDetail title={Item.title} price={Item.price} description={Item.description} url={Item.pictureUrl}/>
+
+      {alert ? 
+    
+        <div className="alert">
+            <div className='alertTitle'>
+                <h3>Producto agregado al carrito</h3>
+            </div>
+            <div className='alertInformation'>
+                <p>Producto: {Item.title}</p>
+                <p>Precio: ${Item.price}</p>  
+            </div>
+        </div>
+
+        : null
+      }
+        <ItemDetail Item={Item} alertOn={alertOn}/>
+
     </div>
   )
 }

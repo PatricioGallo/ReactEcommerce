@@ -2,7 +2,12 @@ import './NavBar.css';
 import logo from '../../logo.svg';
 import CartWidget from '../CartWidget/CartWidget';
 import {Link, NavLink} from 'react-router-dom';
+import { useContext } from 'react';
+import { CartContext } from '../../Context/CartContext';
+
+
 function NavBar(props) {
+    const {cartNumber} = useContext(CartContext);
     return (
         <div className="navBar">
             <div className="logo_class">
@@ -18,7 +23,7 @@ function NavBar(props) {
 
             <div className="login">
                 <button type="button">Login</button>
-                <CartWidget number={props.numberCart}/>
+                <CartWidget number={cartNumber}/>
             </div>
 
             

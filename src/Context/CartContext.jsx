@@ -7,7 +7,7 @@ export const CartProvider  = ({children} ) => {
 
     const [ProductCartList, SetproductCartList] = useState([]);
     const [cartNumber, setCartNumber] = useState(0);
-
+    const [total, setTotal] = useState(0);
    
     const isInCart = (product) => {
 
@@ -29,8 +29,9 @@ export const CartProvider  = ({children} ) => {
                         product.quantity = product.quantity + quantity;
                     }
                  });
+                 setTotal(total+ (item.price * quantity));
+
                  SetproductCartList(newLista);
-                 console.log('se realizo la suma')
         }else{
 
             const newProduct = {
@@ -39,24 +40,32 @@ export const CartProvider  = ({children} ) => {
             };
             const newLista = [...ProductCartList];
             newLista.push(newProduct);
+            newLista.map(item => setTotal(total+(item.price * item.quantity)))
             SetproductCartList(newLista);
             setCartNumber(cartNumber+1);
         }
     }
 
-    const removeItem = (id) => {
+    const removeItem = (id,price,quantity) => {
         const newLista = ProductCartList.filter(item => item.id !== id);
         SetproductCartList(newLista);
         setCartNumber(cartNumber-1);
+        setTotal(total-(price*quantity));
     }
 
     const clear = () => {
         SetproductCartList([]);
         setCartNumber(0);
+        setTotal(0);
     }
     
+    // const totalCount = () => {
+    //     ProductCartList.map(item => setTotal( total + item.price));    
+    // }
+
+
     return(
-        <CartContext.Provider value={{ProductCartList,addItem,removeItem,cartNumber,clear}}>
+        <CartContext.Provider value={{ProductCartList,addItem,removeItem,cartNumber,clear,total,setTotal}}>
                 {children}
         </CartContext.Provider>
 

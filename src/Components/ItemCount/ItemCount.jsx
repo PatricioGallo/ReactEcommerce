@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './ItemCount.css'
 
 const ItemCount = (props) => {
@@ -26,7 +27,14 @@ const ItemCount = (props) => {
             </div>
         </div>
         <div className="item-count__button">
+          {!props.buttonChange ?
             <button onClick={()=>props.onAdd(count)}>AGREGAR AL CARRITO</button>
+            :
+            <div className="item-count__button2">
+              <Link to="/productos" className='link'> <button >SEGUIR COMPRANDO</button> </Link>
+              <Link to="/CartProdudcts" className='link'> <button >TERMINAR COMPRA</button></Link>
+            </div>
+          }
         </div>
     </div>
   )

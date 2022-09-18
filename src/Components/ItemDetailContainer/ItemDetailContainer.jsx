@@ -8,12 +8,16 @@ const ItemDetailContainer = (props) => {
     const [Item, setItem] = useState({});
     const { idProduct} = useParams();
     const [alert, setAlert] = useState(false);
+    const[Upload, setUpload] = useState(false);
 
     useEffect(() => {
         getItems().then( (datos) => {
+          setUpload(true);
+
         setItem(datos.find( item => item.id === parseInt(idProduct)));
       })
     },[idProduct]);
+
 
     const alertOn = () => {
         setAlert(true)
@@ -40,8 +44,12 @@ const ItemDetailContainer = (props) => {
 
         : null
       }
-        <ItemDetail Item={Item} alertOn={alertOn}/>
 
+      {Upload ?
+        <ItemDetail Item={Item} alertOn={alertOn} />
+        :
+        <p>Cargando ...</p>
+      }
     </div>
   )
 }

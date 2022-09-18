@@ -32,6 +32,7 @@ export const CartProvider  = ({children} ) => {
                  setTotal(total+ (item.price * quantity));
 
                  SetproductCartList(newLista);
+                 setCartNumber(cartNumber + quantity);
         }else{
 
             const newProduct = {
@@ -42,14 +43,14 @@ export const CartProvider  = ({children} ) => {
             newLista.push(newProduct);
             newLista.map(item => setTotal(total+(item.price * item.quantity)))
             SetproductCartList(newLista);
-            setCartNumber(cartNumber+1);
+            setCartNumber(cartNumber+quantity);
         }
     }
 
     const removeItem = (id,price,quantity) => {
         const newLista = ProductCartList.filter(item => item.id !== id);
         SetproductCartList(newLista);
-        setCartNumber(cartNumber-1);
+        setCartNumber(cartNumber-quantity);
         setTotal(total-(price*quantity));
     }
 

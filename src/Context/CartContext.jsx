@@ -60,10 +60,6 @@ export const CartProvider  = ({children} ) => {
         setTotal(0);
     }
     
-    // const totalCount = () => {
-    //     ProductCartList.map(item => setTotal( total + item.price));    
-    // }
-
 
     return(
         <CartContext.Provider value={{ProductCartList,addItem,removeItem,cartNumber,clear,total,setTotal}}>

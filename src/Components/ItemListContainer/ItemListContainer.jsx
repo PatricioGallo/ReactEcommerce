@@ -1,8 +1,10 @@
 import './ItemListContainer.css';
 import { useState , useEffect} from "react";
 import ItemList from '../ItemList/ItemList';
-import {getItems} from '../Data/AsyncMock';
 import {useParams} from 'react-router-dom';
+import {getDocs, collection ,query , where } from 'firebase/firestore';
+import { db } from '../../utils/firebase';
+
 
 function ItemListContainer() {
 
@@ -11,18 +13,50 @@ function ItemListContainer() {
   const {category} = useParams();
   const[isUpload, setIsUpload] = useState(false);
 
-  useEffect(() => {
-    getItems().then((productos) => {
-      setIsUpload(true);
-      if(category ){
-        setItems(productos.filter(item => item.categoria === category));
-        setCategories(category);
-      }else{
-          setItems(productos);
-          setCategories(false);
+
+    const getTotalData = async() => {
+      // creamos la referencia 
+      const queryDB = collection(db, "items");
+      const response = await getDocs(queryDB);
+      const productos = response.docs.map(item =>{
+        const newProduct = {
+          ...item.data(),
+          id: item.id
         }
-  });
+        return newProduct;
+      } )
+      setItems(productos);
+      setIsUpload(true);
+    };
+
+  const getCategory = async() => {
+       // creamos la referencia 
+       const queryDB = query(collection(db, "items"),where ("categoria","==",category));
+       const response = await getDocs(queryDB);
+       const productos = response.docs.map(item =>{
+         const newProduct = {
+           ...item.data(),
+           id: item.id
+         }
+         return newProduct;
+       } )
+       setItems(productos);
+       setIsUpload(true);
+  };
+
+  useEffect(() => {
+
+      if(category ){
+        //setItems(productos.filter(item => item.categoria === category));
+        setCategories(category);
+        getCategory();
+      }else{
+          setCategories(false);
+          getTotalData();
+        }
+
   },[category]);
+
 
 
     return (

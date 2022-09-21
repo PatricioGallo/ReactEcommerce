@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 5px;
+    box-shadow: 7px 4px 5px 5px rgba(230,230,230,0.61);
 }
 
 .item-title{
@@ -58,15 +59,15 @@
 .item-button button{
     width: 90%;
     height: 30px;
-    border: 1px solid rgb(3, 169, 172);;
+    border: 1px solid #03a9ac;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
     background-color: white;
-    color:rgb(3, 169, 172);
+    color:#03a9ac;
 }
 .item-button button:hover{
-    color: darkturquoise;
+    color: #00ced1;
     border: 1px solid darkturquoise;
 }
 .link_boton{

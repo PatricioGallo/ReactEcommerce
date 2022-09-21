@@ -1,8 +1,10 @@
 import './ItemDetailContainer.css'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useState , useEffect} from "react";
-import { getItems } from '../Data/AsyncMock';
 import { useParams } from 'react-router-dom';
+import { doc , getDoc} from 'firebase/firestore';
+import { db } from '../../utils/firebase';
+
 const ItemDetailContainer = (props) => {
 
     const [Item, setItem] = useState({});
@@ -11,11 +13,17 @@ const ItemDetailContainer = (props) => {
     const[Upload, setUpload] = useState(false);
 
     useEffect(() => {
-        getItems().then( (datos) => {
-          setUpload(true);
-
-        setItem(datos.find( item => item.id === parseInt(idProduct)));
-      })
+      const getData = async()=> {
+        const query = doc(db, "items", idProduct);
+        const response = await getDoc(query);
+        const newProduct = {
+          ...response.data(),
+          id: response.id
+        }
+        setItem(newProduct);
+        setUpload(true);
+      };
+      getData();
     },[idProduct]);
 
 

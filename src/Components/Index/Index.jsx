@@ -5,6 +5,7 @@ import { useState , useEffect} from "react";
 import { db } from '../../utils/firebase';
 import {getDocs, collection } from 'firebase/firestore';
 
+
 const Index = () => {
   const[Items, setItems] = useState([]);
   const[reference, setreference] = useState(0);
@@ -26,8 +27,6 @@ const Index = () => {
       } );
 
       setItems(productos);
-      console.log(Items);
-
         };
     getData();
   },[])
@@ -36,7 +35,6 @@ const Index = () => {
     if(reference < maxLenght){
       setTimeout(( ) => {
       setreference(reference+3);},7000);
-      console.log(reference);
     }else{
       setreference(0);
     }

@@ -56,7 +56,11 @@ const ItemDetailContainer = (props) => {
       {Upload ?
         <ItemDetail Item={Item} alertOn={alertOn} />
         :
-        <p>Cargando ...</p>
+        <div className='carga'>
+        <span className='loaderContainer'>
+        </span>
+        <p>Cargando...</p>
+      </div>
       }
     </div>
   )

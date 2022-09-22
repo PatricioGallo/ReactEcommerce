@@ -2,10 +2,11 @@ import Item from "../Item/Item";
 import './ItemList.css'
 import {Link} from 'react-router-dom';
 import destacados from '../../media/images/destacados.jpeg';
+
 const ItemList = (props) => {
   return (
     <div className="itemList">
-
+      
         <div className="itemList_Img">
           <img src={destacados} alt="" />
         </div>

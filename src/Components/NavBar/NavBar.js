@@ -6,8 +6,8 @@ import { useContext } from 'react';
 import { CartContext } from '../../Context/CartContext';
 
 
-function NavBar(props) {
-    const {cartNumber} = useContext(CartContext);
+function NavBar() {
+    const {cartNumber,loginOn} = useContext(CartContext);
     return (
         <div className="navBar">
             <div className="logo_class">
@@ -22,7 +22,7 @@ function NavBar(props) {
             </div>
 
             <div className="login">
-                <button type="button">Login</button>
+                <button type="button" onClick={loginOn}>Login</button>
                 <CartWidget number={cartNumber}/>
             </div>
 

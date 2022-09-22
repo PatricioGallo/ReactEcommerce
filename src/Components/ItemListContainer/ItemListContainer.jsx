@@ -64,7 +64,11 @@ function ItemListContainer() {
           {isUpload ? 
           <ItemList items={Items} category={categories}/>
           :
-          <p>Cargando...</p>
+          <div className='carga'>
+            <span className='loaderContainer'>
+            </span>
+            <p>Cargando...</p>
+          </div>
         }
         </div>
     );

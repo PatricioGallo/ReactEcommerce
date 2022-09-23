@@ -4,6 +4,7 @@ import ItemSlide from '../ItemSlide/ItemSlide';
 import { useState , useEffect} from "react";
 import { db } from '../../utils/firebase';
 import {getDocs, collection } from 'firebase/firestore';
+import Footer from '../Footer/Footer';
 
 
 const Index = () => {
@@ -42,9 +43,11 @@ const Index = () => {
 
   return (
     <div className="container">
+        
         <div className="banner">
             <img src={banner1} alt="" />
         </div>
+
         <div className="novedades">
           <div className="novedadesTitle">
             <h1>Ultimas Novedades</h1>
@@ -73,6 +76,7 @@ const Index = () => {
             </div>
           </div>
         </div>
+      <Footer/>
     </div>
   )
 }

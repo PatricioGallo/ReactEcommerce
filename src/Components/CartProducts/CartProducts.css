@@ -108,8 +108,11 @@
     color: #282c34;
 }
 .detailsContent{
-    width: 100%;
+    width: 90%;
     margin-top: 10px;
+}
+.detailsContent{
+  font-size: 18px;
 }
 .detailsButtons{
     width: 100%;
@@ -165,6 +168,17 @@
     height: 200px;
     width: 200px;
 }
+.formAlert{
+  width: 100%;
+  text-align: center;
+}
+.formAlert p{
+  color: red;
+  font-size: 13px;
+}
+
+
+
 
 
 

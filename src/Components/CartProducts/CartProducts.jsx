@@ -13,28 +13,34 @@ const CartProducts = () => {
   const {ProductCartList,removeItem,cartNumber,clear,total} = useContext(CartContext);
   const [isUpload, setIsUpload] = useState(false);
   const [orderId, setOrderId] = useState("");
+  const[alertForm, setAlertForm] = useState(false);
 
 
   const createOrder = (e) => {
     e.preventDefault();
-    setIsUpload(true);
-    const order ={
-      buyer:{
-        name: e.target[0].value,
-        email: e.target[1].value,
-        phone: e.target[2].value
-      },
-      items: ProductCartList,
-      total: total
-    }
-    //creo una referencia 
-    const queryRef = collection(db, "orders");
-    //guardo en la coleccion
-    addDoc(queryRef, order).then((response) => {
-      setOrderId(response.id);
-      setIsUpload(false);
-      clear();
-    });
+    if(e.target[0].value){
+        setIsUpload(true);
+        setAlertForm(false);
+        const order ={
+          buyer:{
+            name: e.target[0].value,
+            email: e.target[1].value,
+            phone: e.target[2].value
+          },
+          items: ProductCartList,
+          total: total
+        }
+        //creo una referencia 
+        const queryRef = collection(db, "orders");
+        //guardo en la coleccion
+        addDoc(queryRef, order).then((response) => {
+          setOrderId(response.id);
+          setIsUpload(false);
+          clear();
+        });
+      }else{
+          setAlertForm(true);
+      }
   };
 
 
@@ -87,7 +93,12 @@ const CartProducts = () => {
                     <div className='detailsButtons'>
                       <button onClick={clear}>Limpiar carrito</button>
                       <button type="submit">Generar Orden</button>
-                   </div>     
+                   </div>   
+                   {alertForm?  
+                    <div className='formAlert'> <p>Por favor rellene todos los campos</p> </div>
+                    :
+                    null
+                  }
                   </form>
                 </div>
               </div>

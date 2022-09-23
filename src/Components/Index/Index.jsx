@@ -10,7 +10,7 @@ const Index = () => {
   const[Items, setItems] = useState([]);
   const[reference, setreference] = useState(0);
   const[maxLenght, setmaxLenght] = useState(5);
-
+  const[isUpload, setisUpload] = useState(false);
 
   useEffect(() => {
 
@@ -52,13 +52,24 @@ const Index = () => {
           </div>
           <div className="novedadesSlide">
             <div className='slideContent'>
+              {!isUpload ? 
+              <>
                 {Items.map( (item,index) => {
                   if( reference <=index && index <  reference+3){
                   return(
                 <ItemSlide title={item.title}  url={item.pictureUrl} key={item.title} id={item.id}/>)}       
               } 
-                )}
+                )
+                }
                 {sumaAutomatica()}
+                </>
+                :
+                <div className='carga'>
+                <span className='loaderContainer'>
+                </span>
+                <p>Cargando...</p>
+              </div>
+              }
             </div>
           </div>
         </div>

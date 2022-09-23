@@ -1,6 +1,6 @@
 .item-container{
     width: 250px;
-    height: 300px;
+    height: 320px;
     border: 1px solid #ccc;
     margin-top: 30px;
     display: flex;
@@ -17,9 +17,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .item-title h1{
-    font-size: 22px;
+    font-size: 16px;
 }
 
 .item-image{
@@ -45,7 +46,9 @@
     align-items: center;
 }
 .item-description p{
-    font-size: 14px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #005cb2;
 }
 
 .item-button{
@@ -58,17 +61,16 @@
 }
 .item-button button{
     width: 90%;
-    height: 30px;
-    border: 1px solid #03a9ac;
+    height: 40px;
+    background-color: #2278c8;
+    border: none;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
-    background-color: white;
-    color:#03a9ac;
+    color: white;
+    font-size: 16px;
 }
 .item-button button:hover{
-    color: #00ced1;
-    border: 1px solid darkturquoise;
+    background-color: #005cb2;
 }
 .link_boton{
     width: 100%;

@@ -14,6 +14,7 @@
     border-radius: 5px;
     justify-content: center;
     align-items: center;
+    box-shadow: 7px 4px 5px 5px rgba(230,230,230,0.61);
 }
 .item-title_Slide{
     width: 100%;
@@ -23,9 +24,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .item-title_Slide h1{
-    font-size: 22px;
+    font-size: 16px;
 }
 
 .item-image_Slide{
@@ -65,16 +67,16 @@
 .item-button_Slide button{
     width: 90%;
     height: 30px;
-    border: 1px solid rgb(3, 169, 172);;
+    background-color: #2278c8;
+    border: none;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
-    background-color: white;
-    color:rgb(3, 169, 172);
+    color: white;
+    font-size: 16px;
 }
 .item-button_Slide button:hover{
-    color: darkturquoise;
-    border: 1px solid darkturquoise;
+    background-color: #005cb2;
+
 }
 .link_boton_Slide{
     width: 100%;

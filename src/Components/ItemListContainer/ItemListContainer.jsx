@@ -12,7 +12,7 @@ function ItemListContainer() {
   const[categories, setCategories] = useState(false);
   const {category} = useParams();
   const[isUpload, setIsUpload] = useState(false);
-
+  const[chargingCategory, setChargingCategory] = useState(false);
 
     const getTotalData = async() => {
       // creamos la referencia 
@@ -42,14 +42,15 @@ function ItemListContainer() {
        } )
        setItems(productos);
        setIsUpload(true);
+       setChargingCategory(false);
   };
 
   useEffect(() => {
 
-      if(category ){
-        //setItems(productos.filter(item => item.categoria === category));
+      if(category){
         setCategories(category);
         getCategory();
+        setChargingCategory(true);
       }else{
           setCategories(false);
           getTotalData();
@@ -62,7 +63,7 @@ function ItemListContainer() {
     return (
         <div className="ItemListContainer">
           {isUpload ? 
-          <ItemList items={Items} category={categories}/>
+          <ItemList items={Items} category={categories} chargingCategory={chargingCategory}/>
           :
           <div className='carga'>
             <span className='loaderContainer'>

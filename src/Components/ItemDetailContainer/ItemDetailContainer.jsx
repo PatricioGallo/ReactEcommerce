@@ -62,6 +62,7 @@ const ItemDetailContainer = (props) => {
         <p>Cargando...</p>
       </div>
       }
+      
     </div>
   )
 }

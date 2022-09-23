@@ -16,9 +16,14 @@ const ItemList = (props) => {
             <div className="itemFinder">
                 <h1>Categorias</h1>
                 <div className="categories">
-                  <Link className="Link" to="/productos/categoria1"><div className="categoryBox">Categoria 1</div></Link>
-                  <Link className="Link" to="/productos/categoria2"><div className="categoryBox">Categoria 2</div></Link>
-                  <Link className="Link" to="/productos/categoria3"><div className="categoryBox">Categoria 3</div></Link>
+                    <div className="categoryBoxBorder">
+                    <Link className="Link" to="/productos/PlacasDeVideo"><div className="categoryBox"> <p>Placas de Video </p></div></Link>
+                    <Link className="Link" to="/productos/Gabinetes"><div className="categoryBox"><p>Gabinetes</p></div></Link>
+                    <Link className="Link" to="/productos/Fuentes"><div className="categoryBox"><p>Fuentes</p></div></Link>
+                    <Link className="Link" to="/productos/Notebook"><div className="categoryBox"><p>Notebooks</p></div></Link>
+                    <Link className="Link" to="/productos/PlacasMadres"><div className="categoryBox"><p>Placas Madres</p></div></Link>
+                    <Link className="Link" to="/productos/Auriculares"><div  className="categoryBox"><p>Auriculares</p></div></Link>
+                  </div>
                 </div>
             </div>
 
@@ -36,7 +41,18 @@ const ItemList = (props) => {
                     :
                     null
                   }
-              {props.items.map( item =>  <Item title={item.title} description={item.description} url={item.pictureUrl} key={item.id} id={item.id}/>  )}
+
+              { !props.chargingCategory?
+              
+              props.items.map( item =>  <Item title={item.title} price={item.price} url={item.pictureUrl} key={item.id} id={item.id}/>  )
+            :
+            <div className='carga'>
+            <span className='loaderContainer'>
+            </span>
+            <p>Cargando...</p>
+          </div>
+              
+            }
             </div>
         </div>
     </div>

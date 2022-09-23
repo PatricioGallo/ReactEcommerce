@@ -15,7 +15,7 @@ const Item = (props) => {
         </div>
 
         <div className="item-description">
-            <p>{props.description}</p>
+            <p>$ {props.price}</p>
         </div>
 
         <div className="item-button">

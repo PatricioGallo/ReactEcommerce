@@ -19,18 +19,21 @@ const ItemDetail = ({Item,alertOn}) => {
 
 
   return (
-    <>
+    <div className='itemDetailContainer'>
+        
         <div className="image">
-            <img src="" alt="" />
+            <img src={Item.pictureUrl} alt="" />
         </div>
 
         <div className="description">
-            <div className="title"><h1>{Item.title}</h1></div>
-            <div className='price'><h2>${Item.price}</h2></div>
-            <div className='description_content'><p>{Item.description}</p></div>
-            <ItemCount title={Item.title}  onAdd={onAdd} buttonChange={buttonChange}/>
+              <div className='category'><p>Categoria {Item.categoria}</p></div>
+              <div className="title"><h1>{Item.title}</h1></div>
+              <div className='price'><h2>${Item.price}</h2></div>
+              <div className='cuotas'><p>Hasta 12 cuotas sin interes</p></div>
+              <ItemCount title={Item.title}  onAdd={onAdd} buttonChange={buttonChange}/>
+              <div className='compraSegura'><p>Compra Protegida, recibí el producto que esperabas o te devolvemos tu dinero.</p></div>
         </div>
-    </>
+    </div>
   )
 }
 

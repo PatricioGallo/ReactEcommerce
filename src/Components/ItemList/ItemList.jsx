@@ -2,6 +2,7 @@ import Item from "../Item/Item";
 import './ItemList.css'
 import {Link} from 'react-router-dom';
 import destacados from '../../media/images/destacados.jpeg';
+import hostinger from '../../media/images/hostinger.jpeg';
 
 const ItemList = (props) => {
 
@@ -20,11 +21,13 @@ const ItemList = (props) => {
         <div className="content">
 
             <div className="itemFinder">
+                
                 <div className="categoriesBox">
                   <div className="titleBox">
                     <h1>Categorias</h1>
                   </div>
                 </div>
+
                 <div className="categories">
                     <div className="categoryBoxBorder">
                     <Link className="Link" to="/productos/PlacasDeVideo"><div className="categoryBox"> <p>Placas de Video </p></div></Link>
@@ -33,6 +36,12 @@ const ItemList = (props) => {
                     <Link className="Link" to="/productos/Notebook"><div className="categoryBox"><p>Notebooks</p></div></Link>
                     <Link className="Link" to="/productos/PlacasMadres"><div className="categoryBox"><p>Placas Madres</p></div></Link>
                     <Link className="Link" to="/productos/Auriculares"><div  className="categoryBox"><p>Auriculares</p></div></Link>
+                  </div>
+                </div>
+
+                <div className="advertisingBox">
+                  <div className="advertisingContent">
+                    <a href="https://hostinger.com.ar?REFERRALCODE=1PATO17" target={"_blank"}><img src={hostinger} alt="" /></a>
                   </div>
                 </div>
             </div>

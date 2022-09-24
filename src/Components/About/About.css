@@ -1,0 +1,56 @@
+.bodyAbout{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutContent{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 7px 4px 5px 5px rgba(230,230,230,0.61);
+
+}
+.logo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.logo img{
+    width: 100px;
+    height: 100px;
+}
+.aboutTitle{
+    width: 100%;
+    margin-top: 30px;
+}
+.aboutTitle h1{
+    font-size: 23px;
+    font-style: italic;
+}
+.aboutTitle2 h1{
+    font-size: 23px;
+    font-style: italic;
+}
+.sign{
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+}
+.sign p{
+    font-style: italic;
+    font-weight: bold;
+}

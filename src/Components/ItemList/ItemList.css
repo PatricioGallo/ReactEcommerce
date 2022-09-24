@@ -135,3 +135,16 @@
 .cross{
     cursor: pointer;
 }
+.advertisingBox{
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.advertisingContent{
+    width: 83%;
+}
+.advertisingContent img{
+    width: 100%;
+}

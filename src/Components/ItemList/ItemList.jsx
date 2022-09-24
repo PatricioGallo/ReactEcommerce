@@ -36,6 +36,8 @@ const ItemList = (props) => {
                     <Link className="Link" to="/productos/Notebook"><div className="categoryBox"><p>Notebooks</p></div></Link>
                     <Link className="Link" to="/productos/PlacasMadres"><div className="categoryBox"><p>Placas Madres</p></div></Link>
                     <Link className="Link" to="/productos/Auriculares"><div  className="categoryBox"><p>Auriculares</p></div></Link>
+                    <Link className="Link" to="/productos/SillasGamer"><div  className="categoryBox"><p>Sillas Gamer</p></div></Link>
+                    <Link className="Link" to="/productos/Mouse"><div  className="categoryBox"><p>Mouse</p></div></Link>
                   </div>
                 </div>
 
@@ -44,6 +46,7 @@ const ItemList = (props) => {
                     <a href="https://hostinger.com.ar?REFERRALCODE=1PATO17" target={"_blank"}><img src={hostinger} alt="" /></a>
                   </div>
                 </div>
+                
             </div>
 
             <div className="itemListContent"> 

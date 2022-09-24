@@ -15,6 +15,14 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+.content{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
 .itemFinder{
     width: 30%;
     display: flex;
@@ -41,7 +49,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 .categories{
@@ -54,14 +62,6 @@
     text-decoration: none;
     color: black
 }
-.content{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-}
-
 .orderFor{
     width: 100%;
     height: 50px;
@@ -116,6 +116,7 @@
     display: flex;
     flex-direction: row;
     justify-content: left;
+    margin-top: 20px;
 }
 .categoriesList{
     height: 20px;
@@ -124,7 +125,6 @@
     justify-content: center;
     align-items: center;
     border: 1px solid #ccc;
-    margin-top: 20px;
     padding: 5px;
     margin-right: 10px;
     border-radius: 5px;

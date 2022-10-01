@@ -24,14 +24,14 @@ const Footer = () => {
             <div className='footerBox2'>
                 <p>Seguinos en nustras redes</p>
                 <div className='redes'>
-                    <a href="https://www.facebook.com/" target={"_blank"}> <img src={facebook} alt="" /> </a>
-                    <a href="https://www.instagram.com/" target={"_blank"}> <img src={instagram} alt="" /> </a>
-                    <a href="https://www.linkedin.com/in/patoogallo/" target={"_blank"}> <img src={linkedin} alt="" /> </a>
+                    <a href="https://www.facebook.com/" target={"_blank"} rel="noreferrer"> <img src={facebook} alt="" /> </a>
+                    <a href="https://www.instagram.com/" target={"_blank"} rel="noreferrer"> <img src={instagram} alt="" /> </a>
+                    <a href="https://www.linkedin.com/in/patoogallo/" target={"_blank"} rel="noreferrer"> <img src={linkedin} alt="" /> </a>
                 </div>
             </div>
         </div>
         <div className='footerCopy'>
-            <p>Designed by <a href="http://patriciogallo.com.ar/" target={'_blank'}>Patricio Gallo</a> | All rights reserved </p>
+            <p>Designed by <a href="http://patriciogallo.com.ar/" target={'_blank'} rel="noreferrer">Patricio Gallo</a> | All rights reserved </p>
         </div>
     </div>
   )

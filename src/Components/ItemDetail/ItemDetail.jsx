@@ -10,6 +10,7 @@ const ItemDetail = ({Item,alertOn}) => {
   const [buttonChange, setButtonChange] = useState(false);
 
   const {addItem} = useContext(CartContext);
+  
   const onAdd = (dato)=>{
     addItem(Item,dato);
     alertOn();

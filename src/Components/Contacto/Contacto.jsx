@@ -1,12 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Footer from '../Footer/Footer';
 import './Contacto.css';
 
 
 const Contacto = () => {
   
-
-
   return (
     <div className='bodyContact'>
       <div className='contactContent'>

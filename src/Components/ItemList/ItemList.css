@@ -43,6 +43,7 @@
     width: 83%;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: white;
 }
 .itemListContent{
     width: 70%;
@@ -56,7 +57,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 .Link{
     text-decoration: none;
@@ -71,6 +72,7 @@
     border-radius: 5px;
     justify-content: left;
     align-items: center;
+    background-color: white;
 }
 .orderSelector{
     width: 200px;
@@ -84,8 +86,8 @@
     align-items: center;
 }
 .orderFor h2{
-    font-size: 15px;
-    color: grey;
+    font-size: 20px;
+    margin-left: 10px;
 }
 .categoryBoxBorder{
     width: 80%;
@@ -103,6 +105,7 @@
     border-right: 1px solid #ccc;
     border-left: 1px solid #ccc;
     font-size: 14px;
+    background-color: white;
 }
 .categoryBox p{
     margin-left: 10px;
@@ -116,7 +119,7 @@
     display: flex;
     flex-direction: row;
     justify-content: left;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 .categoriesList{
     height: 20px;
@@ -125,9 +128,10 @@
     justify-content: center;
     align-items: center;
     border: 1px solid #ccc;
-    padding: 5px;
+    padding: 7px;
     margin-right: 10px;
     border-radius: 5px;
+    background-color: white;
 }
 .categoriesList p{
     margin-right: 10px;

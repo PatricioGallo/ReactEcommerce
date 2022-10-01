@@ -6,10 +6,6 @@ import hostinger from '../../media/images/hostinger.jpeg';
 
 const ItemList = (props) => {
 
-  const abrirSelector = () => {
-    console.log("ure")
-  };
-
   return (
 
     <div className="itemList">
@@ -43,7 +39,7 @@ const ItemList = (props) => {
 
                 <div className="advertisingBox">
                   <div className="advertisingContent">
-                    <a href="https://hostinger.com.ar?REFERRALCODE=1PATO17" target={"_blank"}><img src={hostinger} alt="" /></a>
+                    <a href="https://hostinger.com.ar?REFERRALCODE=1PATO17" target={"_blank"} rel="noreferrer"><img src={hostinger} alt="" /></a>
                   </div>
                 </div>
                 
@@ -51,9 +47,7 @@ const ItemList = (props) => {
 
             <div className="itemListContent"> 
               <div className="orderFor">
-                <div className="orderSelector" onClick={abrirSelector}>
-                  <h2>Ordenar por...</h2>
-                </div> 
+                  <h2>Productos</h2>
                </div>
 
               { props.category ? 

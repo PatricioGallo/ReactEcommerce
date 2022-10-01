@@ -45,8 +45,8 @@ const ItemDetailContainer = (props) => {
                 <h3>Producto agregado al carrito</h3>
             </div>
             <div className='alertInformation'>
-                <p>Producto: {Item.title}</p>
-                <p>Precio: ${Item.price}</p>  
+                <p><strong>Producto:</strong> {Item.title}</p>
+                <p><strong>Precio:</strong> ${Item.price}</p>  
             </div>
         </div>
 

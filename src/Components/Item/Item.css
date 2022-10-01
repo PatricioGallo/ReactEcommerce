@@ -7,6 +7,8 @@
     flex-direction: column;
     border-radius: 5px;
     box-shadow: 7px 4px 5px 5px rgba(230,230,230,0.61);
+    background-color: 	white;
+
 }
 
 .item-title{

@@ -10,8 +10,8 @@ import Footer from '../Footer/Footer';
 const Index = () => {
   const[Items, setItems] = useState([]);
   const[reference, setreference] = useState(0);
-  const[maxLenght, setmaxLenght] = useState(5);
-  const[isUpload, setisUpload] = useState(false);
+  const[maxLenght, ] = useState(5);
+  const[isUpload, ] = useState(false);
 
   useEffect(() => {
 
@@ -60,12 +60,11 @@ const Index = () => {
                 {Items.map( (item,index) => {
                   if( reference <=index && index <  reference+3){
                   return(
-                <ItemSlide title={item.title}  url={item.pictureUrl} key={item.title} id={item.id}/>)}       
-              } 
-                )
+                    <ItemSlide title={item.title}  url={item.pictureUrl} key={item.title} id={item.id}/>)}       
+              })
                 }
                 {sumaAutomatica()}
-                </>
+              </>
                 :
                 <div className='carga'>
                 <span className='loaderContainer'>

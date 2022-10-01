@@ -46,6 +46,7 @@ const CartProducts = () => {
 
 
   return (
+    
     <div className="cart-products-container">
       
     {!isUpload ? 

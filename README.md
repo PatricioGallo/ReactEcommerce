@@ -68,3 +68,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Caracteristicas
+
+La web cuenta con cuatro paginas principales: un inicio, un ecommerce que a su vez cuenta con una subpagina para mostrar el producto, un contato y una seccion sobre nosotros. Tambien cuenta con un carrito para mostrar los productos seleccionados y terminar la compra.
